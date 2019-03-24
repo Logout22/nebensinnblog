@@ -75,7 +75,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	ghp-import -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push git@github.com:logout22/logout22.github.io.git $(GITHUB_PAGES_BRANCH):master
 
 
