@@ -1,6 +1,8 @@
 Welcome!
 ########
 
+:date: 2019-03-24 23:55
+
 Welcome to my new blog, where I will be posting updates on technology
 that cannot be expressed as source code diffs.
 
