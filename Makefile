@@ -9,6 +9,9 @@ CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 GITHUB_PAGES_BRANCH=gh-pages
+# if not set, use ghp-import's
+# default commit message
+LAST_COMMIT_MESSAGE="Update documentation"
 
 
 DEBUG ?= 0
@@ -75,7 +78,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 github: publish
-	ghp-import -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	ghp-import -m "$(LAST_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push git@github.com:logout22/logout22.github.io.git $(GITHUB_PAGES_BRANCH):master
 
 

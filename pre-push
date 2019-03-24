@@ -7,5 +7,6 @@ if [ "$remote" != "origin" ]; then
 fi
 
 type ghp-import >/dev/null
+last_commit_message=$(git log -1 --pretty=%s)
 cd "$(dirname "$0")/../.."
-make github
+make github LAST_COMMIT_MESSAGE="$last_commit_message"
