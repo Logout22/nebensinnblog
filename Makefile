@@ -11,7 +11,7 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 GITHUB_PAGES_BRANCH=gh-pages
 # if not set, use ghp-import's
 # default commit message
-LAST_COMMIT_MESSAGE="Update documentation"
+LAST_COMMIT_MESSAGE=Update documentation
 
 
 DEBUG ?= 0
